@@ -1,0 +1,31 @@
+ 
+# gcd.py
+#
+# Description: A program that calculates greatest common divisor of 2 numbers using Euclid's Algorithm (Check Wikipidiea)
+#
+# Author: Chaitanya Mittal
+# Date: 2023-11-15 18:59:48.441001
+
+""" Getting the greatest common divisor (gcd) of 2 numbers"""
+count = 0
+
+#function to divide 2 numbers and return remainder and dividend
+def divide(a,b):
+    r= a%b
+    return b,r
+
+#test value
+orig_a = a = int(input("Enter first number: "))
+orig_b = b = int(input("Enter second number: "))
+count = 0
+
+#while loop to repeat the division process till remainder=0
+#and return GCD
+#return count
+while b != 0:
+    gcd = b
+    a,b = divide(a,b)
+    count +=1
+    
+
+print(f"GCD = {gcd}")
