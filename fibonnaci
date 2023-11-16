@@ -1,0 +1,15 @@
+#fibonnaci sequence: nth number is sum of n-1th and n-2th number.
+
+#printing fibonnaci series till nth element
+def print_fibonacci(n):
+    nth_element = 1
+    prev_no = 0
+    #for loop to get n elements of series
+    for i in range(n):
+        print(nth_element, end = " ")
+        prev_no,nth_element = nth_element, nth_element + prev_no  #switching elements
+
+#getting the value of n
+n = int(input("Print fibonacci sequence till which element?: "))
+#printing output
+print_fibonacci(n)
